@@ -1,0 +1,9 @@
+{
+  "package": "au.beckam.kubejsprofiler.mixins",
+  "mixins": [
+    "ScriptFileMixin",
+    "InterpreterMixin"
+  ],
+  "client": [],
+  "server": []
+}
