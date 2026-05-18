@@ -29,6 +29,6 @@ public class KubeJSProfiler
     @SubscribeEvent
     public void onServerStopping(ServerStoppingEvent event)
     {
-        KubeJSProfilerRecorder.writeTraceToDefaultLocation();
+        KubeJSProfilerRecorder.writeOnShutdown();
     }
 }
