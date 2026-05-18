@@ -1,5 +1,9 @@
 {
+  "required": true,
+  "minVersion": "0.8.5",
   "package": "au.beckam.kubejsprofiler.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "kubejsprofiler.refmap.json",
   "mixins": [
     "ScriptFileMixin",
     "InterpreterMixin"
