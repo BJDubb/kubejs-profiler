@@ -1,7 +1,9 @@
 package au.beckam.kubejsprofiler;
 
+import au.beckam.kubejsprofiler.command.KubeJSProfilerCommand;
 import au.beckam.kubejsprofiler.trace.KubeJSProfilerRecorder;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.event.server.ServerStoppingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,5 +32,11 @@ public class KubeJSProfiler
     public void onServerStopping(ServerStoppingEvent event)
     {
         KubeJSProfilerRecorder.writeOnShutdown();
+    }
+
+    @SubscribeEvent
+    public void onRegisterCommands(RegisterCommandsEvent event)
+    {
+        KubeJSProfilerCommand.register(event.getDispatcher());
     }
 }
